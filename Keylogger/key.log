@@ -1,0 +1,10 @@
+Logging started ...
+
+2016-11-30 11:43:21-0500 > abcdefghijklmn
+2016-11-30 11:43:30-0500 > vim key.o<BckSp>log<Tab>
+2016-11-30 11:43:44-0500 > <LShft>:q
+2016-11-30 11:43:49-0500 > sudo logkeys --kill
+2016-11-30 11:44:07-0500 > 
+
+Logging stopped at 2016-11-30 11:44:07-0500
+
