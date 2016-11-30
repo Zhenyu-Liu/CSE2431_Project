@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
  memset(&srv_addr, 0, sizeof(srv_addr)); /* zero-fill srv_addr structure*/
  memset(&cli_addr, 0, sizeof(cli_addr)); /* zero-fill cli_addr structure*/
  srv_addr.sin_family = AF_INET;
- srv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+ srv_addr.sin_addr.s_addr =inet_addr("172.16.116.132");
  /* if port number supplied, use it, otherwise use SRV_PORT */
  srv_addr.sin_port = (argc > 2) ? htons(atoi(argv[2])) : htons(SRV_PORT);
  if ( (listen_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {

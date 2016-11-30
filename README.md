@@ -19,3 +19,6 @@
 
 * [TCP keepalive HOWTO](http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/programming.html)
     
+* [get current directory path](http://stackoverflow.com/questions/298510/how-to-get-the-current-directory-in-a-c-program)
+
+* [Timer in C](http://stackoverflow.com/questions/17167949/how-to-use-timer-in-c)
