@@ -9,7 +9,7 @@
 #define SRV_PORT 5103 /* default port number */
 #define MAX_RECV_BUF 256
 #define MAX_SEND_BUF 256
-char* SRV_IP = "10.0.2.15";
+char* SRV_IP = "172.16.116.132";
 void get_file_name(int, char*);
 int send_file(int, char*);
 

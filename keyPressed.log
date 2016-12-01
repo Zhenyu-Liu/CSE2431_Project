@@ -1,0 +1,31 @@
+Logging started ...
+
+2016-11-30 21:26:03-0500 > cd <LShft>~<BckSp><LShft>~/d<Tab>e<Tab>
+2016-11-30 21:26:17-0500 > ./se<Tab>
+2016-11-30 21:26:20-0500 > <Up> <LShft>k<Tab>ey<LShft>Pressed.log 5103
+
+Logging stopped at 2016-11-30 21:26:33-0500
+
+Logging started ...
+
+2016-11-30 21:26:33-0500 > 
+2016-11-30 21:26:34-0500 > 
+
+Logging stopped at 2016-11-30 21:27:04-0500
+
+Logging started ...
+
+2016-11-30 21:27:04-0500 > cd <LShft>Des<Tab>
+2016-11-30 21:27:12-0500 > vim k<Tab>
+2016-11-30 21:27:14-0500 > j<#+13>jjjjkkkkkkkjjjjjjjjkkk<#+21>j<#+22><LShft>:q
+2016-11-30 21:27:22-0500 > reboot
+2016-11-30 21:27:25-0500 > 
+
+Logging stopped at 2016-11-30 21:27:25-0500
+
+Logging started ...
+
+2016-11-30 21:54:49-0500 > 
+
+Logging stopped at 2016-11-30 21:54:50-0500
+
