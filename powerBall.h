@@ -8,7 +8,7 @@ int randomNumber(){
     int result=rand()%30+1;
     return result;
 }
-
+//Prompt user to input 3 numbers. Then count the numbers that match the random number then return the count
 int PBmain(){
 	printf("Let's play power ball!\n");
 	int a=randomNumber();
