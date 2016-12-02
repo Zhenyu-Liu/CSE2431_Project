@@ -22,3 +22,18 @@
 * [get current directory path](http://stackoverflow.com/questions/298510/how-to-get-the-current-directory-in-a-c-program)
 
 * [Timer in C](http://stackoverflow.com/questions/17167949/how-to-use-timer-in-c)
+
+# How to use
+##For both user and hacker:
+1. Download the zip file of the project and extract anywhere desired.
+Note: Don’t change the project name, i.e. leave it as CSE2431_Project.
+2. Open CSE2431_Project/socket/client.c, change SRV_IP to server’s (hacker’s) IP address.
+3. Open the terminal (shell) and redirect to CSE2431_Project/.
+4. Type make to make files.
+##For hacker:
+5. Open CSE2431_Project/socket, copy or move the executable named server to anywhere you can find.
+6. In terminal, redirect to the place where server is. Running server using the command line ./server keyPressed.log 5103
+7. Waiting for the file.
+For user:
+5. In terminal, run executable called install. Then the installation is done.
+
